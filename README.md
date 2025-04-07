@@ -1,22 +1,31 @@
-🌌 COSMIC + Regolith Hybrid Environment with Cosmic Session Integration
-Integrating COSMIC's system daemons and cosmic-session into a Regolith (i3-based) environment
+# 🌌 COSMIC + Regolith Hybrid Environment with Cosmic Session Integration
 
-🧠 Objective
-This project demonstrates how to integrate cosmic-session into Regolith to harness the modern system services provided by COSMIC—while keeping the lightweight, keyboard-centric workflow of the i3 window manager. The goal is to ensure that key components like settings, on-screen displays (OSDs), and idle settings function as intended within this hybrid desktop setup.
+**Integrating COSMIC's system daemons and cosmic-session into a Regolith (i3-based) environment**
 
-🧩 System Info
-Component	Details
-Distro	Ubuntu-based with Regolith
-Window Manager	i3 (via Regolith)
-COSMIC Components	cosmic-session, cosmic-settings-daemon
-Enhancements	Updated Regolith components for cosmic-session integration
-⚙️ Installation and Setup
-1. Install Regolith
+## 🧠 Objective
+
+This project demonstrates how to **integrate cosmic-session** into Regolith to harness the modern system services provided by COSMIC—while keeping the lightweight, keyboard-centric workflow of the i3 window manager. The goal is to ensure that key components like **settings, on-screen displays (OSDs), and idle settings** function as intended within this hybrid desktop setup.
+
+---
+
+## 🧩 System Info
+
+| Component               | Details                                  |
+|-------------------------|------------------------------------------|
+| **Distro**              | Ubuntu-based with Regolith               |
+| **Window Manager**      | i3 (via Regolith)                        |
+| **COSMIC Components**   | `cosmic-session`, `cosmic-settings-daemon` |
+| **Enhancements**        | Updated Regolith components for cosmic-session integration |
+
+---
+
+## ⚙️ Installation and Setup
+
+### 1. Install Regolith
+
 Start by installing Regolith on your system:
 
-bash
-Copy
-Edit
+```bash
 # Add the Regolith repository and update package list
 sudo add-apt-repository ppa:regolith-linux/release
 sudo apt update
