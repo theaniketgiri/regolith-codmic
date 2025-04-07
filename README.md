@@ -1,10 +1,11 @@
+
 # 🪐 COSMIC Epoch on Ubuntu 22.04 (Regolith Wayland) via System Extensions
 
 **Tested Configuration:**  
 - **OS**: Ubuntu 22.04  
 - **Session**: Regolith (Wayland)  
-- **COSMIC**: Installed via [`cosmic-epoch`](https://github.com/pop-os/cosmic-epoch)  
-- **Integration Method**: `sysext` (systemd system extensions)
+- **COSMIC**: Installed via [cosmic-epoch](https://github.com/pop-os/cosmic-epoch)  
+- **Integration Method**: sysext (systemd system extensions)
 
 ---
 
@@ -26,18 +27,43 @@ sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev \
 gstreamer1.0-plugins-base gstreamer1.0-plugins-good
 ```
 
-> **Note**: `gstreamer-sys` is a Rust crate, not a package — manage via `Cargo.toml`.
+> **Note**: gstreamer-sys is a Rust crate, not a package — manage via Cargo.toml.
 
 ---
 
-## 🚀 Execution Flow
+## 🚀 One-Line Setup Script
 
 ```bash
-git clone --recurse-submodules https://github.com/pop-os/cosmic-epoch
-cd cosmic-epoch
-just sysext
-cosmic-launcher
+git clone --recurse-submodules https://github.com/pop-os/cosmic-epoch && cd cosmic-epoch && just sysext
 ```
+
+To launch:
+```bash
+./cosmic-launcher/target/release/cosmic-launcher
+```
+
+---
+
+## 🎬 Proof of Work (Videos)
+
+Video demonstrations available:
+
+- ✅ `Untitled design.mp4`
+- ✅ `Untitled design(1).mp4`
+- ✅ `Untitled design(2).mp4`
+
+  
+
+## 🎬 Proof of Work (Image)
+
+
+### 📸 Screenshot 1: Service Running with Logs
+
+![COSMIC Settings Daemon - Running](./Screenshot%20from%202025-04-07%2020-21-51.png)
+
+### 📸 Screenshot 2: Continuous Log Output (File Not Found)
+
+![COSMIC Settings Daemon - Log Output](./Screenshot%20from%202025-04-07%2020-22-08.png)
 
 ---
 
@@ -45,8 +71,8 @@ cosmic-launcher
 
 | Component                 | Behavior in Regolith | Notes |
 |--------------------------|----------------------|-------|
-| **cosmic-settings**      | 🟡 Partially Working  | Needs `cosmic-ext-sway-daemon` for appearance |
-| **cosmic-panel**         | 🟡 Glitchy            | Only `cosmic-applet-power` respects layout |
+| **cosmic-settings**      | 🟡 Partially Working  | Needs cosmic-ext-sway-daemon for appearance |
+| **cosmic-panel**         | 🟡 Glitchy            | Only cosmic-applet-power respects layout |
 | **cosmic-launcher**      | 🔴 Unresponsive       | Likely due to missing runtime/session context |
 | **cosmic-store**         | 🔴 UI only            | Install fails — write permission error |
 | **cosmic-files**         | 🟢 Fully Functional    | Replaces GNOME Files without issue |
@@ -66,12 +92,10 @@ cosmic-launcher
   - Placement, opacity toggle, add/remove applets  
   - ⚠️ *Auto-hide & layout bugs in panel*
 
-- **Appearance Settings** *(requires `cosmic-ext-sway-daemon`)*  
+- **Appearance Settings** *(requires cosmic-ext-sway-daemon)*  
   - Accent color  
   - Gap size  
   - Active window hint sizing
-
----
 
 ### ❌ **Non-Functional Areas**
 
@@ -86,7 +110,7 @@ cosmic-launcher
 
 - **Workspaces**  
   - Workspace info missing  
-  - ⬇️ Suggestion: Use `swayipc` (Rust) for fetching and injecting workspace data
+  - ⬇️ Suggestion: Use swayipc (Rust) for fetching and injecting workspace data
 
 - **Window Management Options**  
   - Minimize/maximize button toggles fail  
@@ -113,9 +137,8 @@ cosmic-launcher
 ```text
 unable to create '/usr/bin/7z.dpkg-new' (code 58)
 ```
-💡 Suggestion: PackageKit attempts system-wide writes — sandbox with Flatpak or tweak permissions temporarily.
 
----
+💡 Suggestion: PackageKit attempts system-wide writes — sandbox with Flatpak or tweak permissions temporarily.
 
 ### ❗ OSD Crash
 
@@ -132,10 +155,8 @@ org.freedesktop.PolicyKit1.Error.Failed: An authentication agent already exists
 
 ## 🧬 Suggestions for Integration Fixes
 
-- 🌐 **Workspaces**: Add sway workspace detection via `swayipc` crate
+- 🌐 **Workspaces**: Add sway workspace detection via swayipc crate
 - 🖱️ **Input Settings**: Stub or port Regolith’s device management to Cosmic’s UI
 - 🪟 **Window Management**: Rebuild UI hooks specific to Regolith’s tiling behavior
-- 🔒 **Authentication Agents**: Avoid `.unwrap()` where multiple polkit agents may exist
+- 🔒 **Authentication Agents**: Avoid .unwrap() where multiple polkit agents may exist
 - ⚡ **Launcher Debugging**: Start with verbose logs or under native COSMIC session
-
----
