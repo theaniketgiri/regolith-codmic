@@ -121,7 +121,6 @@ systemctl --user restart cosmic-settings-daemon.service
 The current `cosmic-session` integration is just the beginning. Future enhancements include:
 
 - `cosmic-panel` — A unified top bar experience.
-- `cosmic-comp` — A Wayland-based compositor.
 - `cosmic-launcher` — A native application launcher.
 - `cosmic-settings-ui` — A visual control center.
 - `cosmic-keybinds` — A native keybinding daemon.
