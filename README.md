@@ -131,6 +131,19 @@ These integrations aim to further blend the high-performance, minimalistic desig
 
 ---
 
+## 🧾 Proof: COSMIC Settings Daemon Running
+
+Below are two screenshots showing the active status of the `cosmic-settings-daemon` service and related log messages:
+
+### 📸 Screenshot 1: Service Running with Logs
+
+![COSMIC Settings Daemon - Running](./Screenshot%20from%202025-04-07%2020-21-51.png)
+
+### 📸 Screenshot 2: Continuous Log Output (File Not Found)
+
+![COSMIC Settings Daemon - Log Output](./Screenshot%20from%202025-04-07%2020-22-08.png)
+
+
 ### 🧩 Why This Setup?
 
 This hybrid desktop environment combines:
