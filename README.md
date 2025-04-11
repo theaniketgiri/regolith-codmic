@@ -1,8 +1,8 @@
 
-# 🪐 COSMIC Epoch on Ubuntu 22.04 (Regolith Wayland) via System Extensions
+# 🪐 COSMIC Epoch on Ubuntu 24.04 (Regolith Wayland) via System Extensions
 
 **Tested Configuration:**  
-- **OS**: Ubuntu 22.04  
+- **OS**: Ubuntu 24.04  
 - **Session**: Regolith (Wayland)  
 - **COSMIC**: Installed via [cosmic-epoch](https://github.com/pop-os/cosmic-epoch)  
 - **Integration Method**: sysext (systemd system extensions)
